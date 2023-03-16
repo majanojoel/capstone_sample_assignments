@@ -2,11 +2,11 @@
 
 int factorialNum = 5;
 
-int factorial(){
+int globalFactorial(){
     int currNum = factorialNum;
     factorialNum--;
     if(factorialNum==0) return 1;
-    return currNum*factorial();
+    return currNum*globalFactorial();
 }
 
 // int factorial(int a){
@@ -16,7 +16,7 @@ int factorial(){
 
 int main(void){
     printf("My recursion program!\n");
-    int result = factorial();
+    int result = globalFactorial();
     printf("Factorial: %d\n", result);
     return 0;
 }
