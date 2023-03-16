@@ -63,7 +63,7 @@ for file in fileList:
     for plugin, pluginArg in pluginDict.items():
         printText(T_CLR_MSG, f"Running {plugin} check on {str(file)}")
         argString = ''
-        if pluginArg != '' and plugin != "recursive_functions":
+        if pluginArg != '':
             argString = generateArgs(plugin, pluginArg)
         output=subprocess.getoutput(f"clang-15 -fplugin=./{plugin}.so{argString} -c {str(file)}")
         if(output != ""): 
