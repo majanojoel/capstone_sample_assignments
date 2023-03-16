@@ -1,10 +1,10 @@
-CC = clang++
+CXX = clang++-15
 CFLAGS = -Wall
 LDFLAGS =
-OBJFILES = enoughCharacters.o 
-TARGET = enoughCharacters
+OBJFILES = factorial.o 
+TARGET = factorial
 all: $(TARGET)
 $(TARGET): $(OBJFILES)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJFILES) $(LDFLAGS)
+	$(CXX) $(CFLAGS) -o $(TARGET) $(OBJFILES) $(LDFLAGS)
 clean:
 	rm -f $(OBJFILES) $(TARGET) *~
